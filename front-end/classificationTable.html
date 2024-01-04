@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>外卖商品高级搜索</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="card">
+        <h2>外卖商品高级搜索</h2>
+
+        <!-- 菜品类目 -->
+        <div>
+            <h4>菜品类目</h4>
+            <label><input type="checkbox" name="category" value="mainCourse"> 主食</label>
+            <label><input type="checkbox" name="category" value="snack"> 小吃</label>
+            <label><input type="checkbox" name="category" value="hotDish"> 热菜</label>
+            <!-- 更多类目 -->
+        </div>
+
+        <!-- 口味 -->
+        <div>
+            <h4>口味</h4>
+            <label><input type="checkbox" name="taste" value="spicy"> 辣味</label>
+            <label><input type="checkbox" name="taste" value="sweetSour"> 酸甜味</label>
+            <!-- 更多口味 -->
+        </div>
+
+        <!-- 食材和荤素 -->
+        <div>
+            <h4>食材和荤素</h4>
+            <label><input type="checkbox" name="ingredient" value="seafood"> 海鲜</label>
+            <label><input type="checkbox" name="ingredient" value="vegetable"> 蔬菜</label>
+            <label><input type="checkbox" name="ingredient" value="meat"> 荤食</label>
+            <label><input type="checkbox" name="ingredient" value="vegetarian"> 素食</label>
+            <!-- 更多选项 -->
+        </div>
+
+        <!-- 做法 -->
+        <div>
+            <h4>做法</h4>
+            <label><input type="checkbox" name="cookingMethod" value="boiled"> 煮</label>
+            <label><input type="checkbox" name="cookingMethod" value="fried"> 炒</label>
+            <!-- 更多做法 -->
+        </div>
+
+        <!-- 健康餐选项 -->
+        <div>
+            <h4>健康餐选项</h4>
+            <label><input type="checkbox" name="healthyOption" value="lowFat"> 低脂低卡</label>
+            <label><input type="checkbox" name="healthyOption" value="highFiber"> 高纤维</label>
+            <!-- 更多选项 -->
+        </div>
+
+        <!-- 套餐搭配 -->
+        <div>
+            <h4>套餐搭配</h4>
+            <label><input type="checkbox" name="mealCombo" value="combo1"> 套餐1</label>
+            <label><input type="checkbox" name="mealCombo" value="combo2"> 套餐2</label>
+            <!-- 更多套餐 -->
+        </div>
+
+        <!-- 价格区间 -->
+        <div>
+            <h4>价格区间</h4>
+            <select id="priceRange">
+                <option value="">请选择</option>
+                <option value="0-50">0-50元</option>
+                <option value="50-100">50-100元</option>
+                <option value="100-150">100-150元</option>
+                <option value="150+">150元以上</option>
+            </select>
+        </div>
+
+        <!-- 商家信息 -->
+        <div>
+            <h4>商家信息</h4>
+            <input type="text" id="merchantInfo" placeholder="输入商家名称或位置">
+        </div>
+
+        <!-- 搜索按钮 -->
+        <div>
+            <button onclick="search()">搜索</button>
+        </div>
+
+        <!-- 搜索结果 -->
+        <h2>搜索结果</h2>
+        <div id="results">
+            <!-- 结果将在这里显示 -->
+        </div>
+
+    </div>
+
+</body>
+
+</html>
