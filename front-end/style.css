@@ -55,9 +55,17 @@ button:hover {
     background-color: #218838;
 }
 
-#results {
+#resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resultsTable th, #resultsTable td {
     border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 4px;
-    background-color: white;
+    padding: 8px;
+    text-align: left;
+}
+
+#resultsTable th {
+    background-color: #f4f4f4;
 }

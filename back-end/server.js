@@ -7,9 +7,9 @@ const port = 3000;
 // 数据库配置
 const dbConfig = {
     host: 'localhost',
-    user: 'your_username', // 替换为数据库用户名
-    password: 'your_password', // 替换为数据库密码
-    database: 'your_database' // 替换为数据库名
+    user: 'root', // 替换为数据库用户名
+    password: '123456', // 替换为数据库密码
+    database: 'classification' // 替换为数据库名
 };
 
 // 创建数据库连接
@@ -25,6 +25,14 @@ app.use(express.json());
 //测试
 app.get('/', (req, res) => {
     res.send('Hello, Node!');
+    // 写个查询语句来测试
+    connection.query('SELECT * FROM dishes', (error, results, fields) => {
+        if (error) {
+            console.error('数据库连接失败: ' + error.stack);
+            return;
+        }
+        console.log('数据库连接成功',results);
+    });
 });
 
 // 处理POST请求
